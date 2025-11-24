@@ -1,0 +1,93 @@
+.mods-container {
+box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.mod-card {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 300px;
+}
+
+.img-background {
+    width: 150px;
+    height: 170px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-background img {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.mod-info {
+    cursor: pointer;
+}
+
+.mod-info h2 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--white-color);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mod-info p {
+    color: var(--white-color);
+    gap: 8px;
+    margin: 0;
+    font-size: 10px;
+    color: var(--yellow-color);
+    opacity: 0.75;
+    font-weight: bold;
+}
+
+.mod-info span {
+    font-size: 8px;
+    color: var(--white-color);
+    text-wrap: nowrap;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.mod-description {
+    margin-top: 16px;
+    font-size: 10px;
+    color: var(--white-color);
+    opacity: 0.87;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+}
+
+.img-background:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 5;
+    cursor: pointer;
+}

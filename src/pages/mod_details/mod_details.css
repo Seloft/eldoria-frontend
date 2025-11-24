@@ -1,0 +1,236 @@
+.mod-details-page {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.floating-message.left {
+    position: fixed;
+    top: 32px;
+    left: 32px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 16px;
+    min-width: 220px;
+    max-width: 320px;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-16px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-color);
+    margin: 16px 0;
+}
+
+/* Header */
+
+.mod-details-header {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.header-image {
+    width: 150px;
+    height: 170px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
+
+.header-image img {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.header-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stats-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.stats-row span {
+    font-weight: bold;
+    color: var(--yellow-color);
+}
+
+/* End of Header */
+
+/* Markdown Body */
+
+.markdown-body {
+    width: 100%;    
+    box-sizing: border-box;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.markdown-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.markdown-body th, .markdown-body td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: left;
+}
+
+.markdown-body img {
+    width: 380px;
+    height: 245px;
+    display: block;
+    margin: 8px 0;
+    object-fit: contain;
+}
+
+.markdown-body td img {
+    width: 48px;
+    height: 48px;
+    max-width: none;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+/* End of Markdown Body */
+
+/* File Versions List */
+
+.table-description {
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.table-description p {
+    margin: 0;
+    text-align: left;
+    width: 150px;
+    font-size: 16px;
+}
+
+.table-description span {
+    margin: 0;
+    text-align: left;
+    width: 24px;
+    font-size: 16px;
+}
+
+.file-version-row {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    
+}
+
+.file-version-row p {
+    margin: 0;
+    text-align: left;
+    width: 150px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: normal;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* End of File Versions */
+
+/* Gallery */
+
+.gallery-image {
+    width: 380px;
+    height: 245px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+}
+
+.contents-gallery {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
