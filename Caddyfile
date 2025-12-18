@@ -1,0 +1,25 @@
+eldoria.net.br, www.eldoria.net.br {
+    # Arquivos estáticos do SPA
+    root * /usr/share/caddy
+
+    # Cache de arquivos estáticos
+    @static {
+        path *.js *.css *.png *.jpg *.jpeg *.gif *.ico *.svg *.woff *.woff2 *.ttf *.eot
+    }
+    header @static Cache-Control "public, max-age=31536000, immutable"
+
+    # Compressão
+    encode gzip
+
+    # API proxy
+    handle /api/* {
+        uri strip_prefix /api
+        reverse_proxy eldoria-backend:8000
+    }
+
+    # SPA - todas as rotas vão para index.html
+    handle {
+        try_files {path} /index.html
+        file_server
+    }
+}
